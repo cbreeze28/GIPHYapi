@@ -9,8 +9,8 @@ var topics = ["Steak", "Mashed Potatoes", "Green Beans", "Chicken Fajitas"];
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-          //I think I need to do a JSON parse of some kind
-          //Response.data returns undefined and no gif's, BUT it does return 10, undefined objects so there's communication
+          //I think I need to do a JSON parse of some kind--couldn't get stringify to work
+          //Response.data returns undefined and no gif's, BUT it does return 10, undefined objects so there's communication.
           var foodDiv = $("<div class='food'>");
           var rating = response.data;
           var facts = $("<p>").text("Rating: " + rating);
